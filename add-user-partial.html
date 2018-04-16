@@ -1,0 +1,33 @@
+<div class="input-group add-user">
+    <input type="text" class="form-control" placeholder="Full name" ng-model="name">
+    <input type="email" class="form-control" placeholder="Email" ng-model="email">
+    <input type="text" class="form-control" placeholder="Username" ng-model="username">
+    <input type="password" class="form-control" placeholder="Password" ng-model="password">
+    <button type="submit" class="btn btn-info" ng-click="app.register(name, email, username, password)">Add User</button>
+</div>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Users that are currently in a database</div>
+
+  <!-- Table -->
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Full name</th>
+      <th scope="col">email</th>
+      <th scope="col">username</th>
+      <th scope="col">password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in app.users track by $index">
+      <th scope="row">{{$index}}</th>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.password}}</td>
+    </tr>
+  </tbody>
+  </table>
+</div>

@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER START */
+.header {
+    display: grid;
+    grid-template-columns: [first] 100px [second] auto [end] 200px;
+    grid-template-rows: [row1-start] 100%;
+    background-color: #3166b7;
+}
+
+.logo {
+    padding: 15px;
+    align-items: center;
+}
+
+.navigation {
+    justify-self: center;
+    align-self: center;
+}
+
+.btn-info {
+    background-color: #00b3ee;
+    background-image: none;
+}
+
+.user {
+    display: inline-block;
+    justify-self: center;
+    align-self: center;
+}
+
+.log-in {
+    display: inline-block;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    padding-right: 15px;
+    color: #fff;
+}
+
+.log-out {
+    display: inline-block;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    padding-right: 15px;
+    color: #fff;
+}
+
+.sign-up {
+    display: inline-block;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    color: #fff;
+}
+
+.user div a {
+    text-decoration: none;
+    color: #fff;
+}
+/* HEADER END */
+
+/* CONTENT START */
+.content {
+    display: grid;
+    grid-template-columns: [first] 250px [second] auto [end] 250px;
+    grid-template-rows: [row1] 35% [row2] 65%;
+    background-color: #fff;
+}
+
+.breadcrumb {
+    justify-self: start;
+    align-self: start;
+    margin: 30px;
+    grid-column-start: first;
+    grid-column-end: end;
+    grid-row-start: row1;
+    grid-row-end: row2;
+}
+
+.sorting {
+    justify-self: start;
+    align-self: start;
+    margin: 30px;
+}
+
+.sorting div a {
+    text-decoration: none;
+}
+
+.category {
+    justify-self: start;
+    align-self: start;
+    margin: 30px;
+    width: 183px;
+}
+
+.category li a {
+    text-decoration: none;
+}
+
+.item {
+    display: inline-block;
+}
+
+.item .item-box {
+    display: inline-block;
+    justify-self: start;
+    align-self: start;
+    margin: 30px;
+}
+
+/* CONTENT END */
+
+/* REGISTRATION START */
+.register-grid {
+    display: grid;
+    grid-template-columns: [first] 25% [second] 50% [third] 25%;
+    grid-template-rows: [row1] 100%;
+}
+
+.register {
+    grid-column-start: second;
+    grid-column-end: third;
+    justify-self: center;
+    align-self: center;
+    margin: 30px;
+}
+
+.register input{
+    margin: 5px;
+}
+
+.register button{
+    margin: 5px;
+}
+/* REGISTRATION END */
+
+/*CLIENT LOGIN START*/
+.grid-client-login {
+    display: grid;
+    grid-template-columns: [first] 25% [second] 50% [third] 25%;
+    grid-template-rows: [row1] 100%;
+}
+
+.client-login {
+    grid-column-start: second;
+    grid-column-end: third;
+    justify-self: center;
+    align-self: center;
+    margin: 30px;
+}
+
+.client-login input {
+    margin: 5px;
+}
+
+.client-login button {
+    margin: 5px;
+}
+/*CLIENT LOGIN END*/
+
+/*ADMIN LOGIN START*/
+.grid-admin-login {
+    display: grid;
+    grid-template-columns: [first] 25% [second] 50% [third] 25%;
+    grid-template-rows: [row1] 100%;
+}
+
+.admin-login {
+    grid-column-start: second;
+    grid-column-end: third;
+    justify-self: center;
+    align-self: center;
+    margin: 30px;
+}
+
+.admin-login input {
+    margin: 5px;
+}
+
+.admin-login button {
+    margin: 5px;
+}
+/*ADMIN LOGIN END*/
+
+/*SPECIFIC ELEMENT START*/
+.grid-specific-element {
+    display: grid;
+    grid-template-columns: [first] 25% [second] 50% [third] 25%;
+    grid-template-rows: [row1] 450px;
+}
+
+.specific-element {
+    grid-column-start: second;
+    grid-column-end: third;
+    justify-self: center;
+    align-self: center;
+    margin: 30px;
+}
+/*SPECIFIC ELEMENT END*/
+
+/*ADMIN PANEL START*/
+.admin-panel {
+    display: grid;
+    grid-template-columns: [first] 25% [second] 50%;
+    grid-template-rows: [row1] 100%;
+}
+
+.admin-panel .admin-list {
+    margin: 25px;
+}
+
+.admin-panel .component {
+    margin: 25px;
+}
+
+.add-user input {
+    margin: 5px;
+}
+
+.add-user button {
+    margin: 5px;
+}
+/*ADMIN PANEL END*/
+
+/* ABOUT US START */
+.grid-about {
+    display: grid;
+    grid-template-columns: [first] 10% [second] 80% [third] 80%;
+    grid-template-rows: [row1] 100%;
+}
+
+.about {
+    grid-column-start: second;
+    grid-column-end: third;
+}
+/* ABOUT US END */

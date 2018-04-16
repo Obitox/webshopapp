@@ -1,0 +1,30 @@
+<div class="content">
+            <ol id="breadcrumbs" class="breadcrumb">
+                <li><a ui-sref="home">Home</a></li>
+            </ol>
+            <div class="dropdown sorting">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Sorting
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a ng-click="app.sortPriceLowHigh()">Price: Low - High</a></li>
+                  <li><a ng-click="app.sortPriceHighLow()">Price: High - Low</a></li>
+                </ul>
+            </div>
+            <ul class="list-group category">
+                <li class="list-group-item" ng-click="app.allSort()"><a>All products</a></li>
+                <li class="list-group-item" ng-click="app.sort('Computer')"><a>Computers</a></li>
+                <li class="list-group-item" ng-click="app.sort('TV')"><a>TVs</a></li>
+                <li class="list-group-item" ng-click="app.sort('Camera')"><a>Cameras</a></li>
+                <li class="list-group-item" ng-click="app.sort('Cell phone')"><a>Cell phones</a></li>
+            </ul>
+            <div class="item" ui-sref="specific-element">
+                <div class="item-box" ng-repeat="product in app.products track by $index" ng-click="app.specificElement($index)">
+                    <p>{{product.title}}</p>
+                    <img alt="item" src="{{product.img}}">
+                    <p>{{"Price:"+product.price+" din"}}</p>
+                    <p>{{"Category:"+product.category}}</p>
+                </div>
+            </div>
+</div>

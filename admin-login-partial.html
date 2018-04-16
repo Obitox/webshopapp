@@ -1,0 +1,16 @@
+<div class="grid-admin-login">
+    <div class="input-group admin-login" ng-if="!app.userStatus">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Admin LOGIN
+            </div>
+          </div>
+          <input type="text" class="form-control" placeholder="Username" ng-model="username">
+          <input type="password" class="form-control" placeholder="Password" ng-model="password">
+          <button type="submit" class="btn btn-info" ng-click="app.adminLogin(username, password)">Submit</button>
+          <button type="submit" class="btn btn-info" ui-sref="clientLogin">Client Login</button>
+    </div>
+    <div class="client-login" ng-if="app.userStatus">
+        <button ui-sref="admin-panel" type="button" class="btn btn-info">Admin panel</button>
+    </div>
+</div> 

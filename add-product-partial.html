@@ -1,0 +1,33 @@
+<div class="input-group add-user">
+    <input type="text" class="form-control" placeholder="title" ng-model="title">
+    <input type="text" class="form-control" placeholder="image" ng-model="img">
+    <input type="number" class="form-control" placeholder="price" ng-model="price">
+    <input type="text" class="form-control" placeholder="category" ng-model="category">
+    <button type="submit" class="btn btn-info" ng-click="app.addProduct(title, img, price, category)">Add Product</button>
+</div>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Products that are currently in a database</div>
+
+  <!-- Table -->
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">title</th>
+      <th scope="col">img</th>
+      <th scope="col">price(din)</th>
+      <th scope="col">category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="product in app.products track by $index">
+      <th scope="row">{{$index}}</th>
+      <td>{{product.title}}</td>
+      <td>{{product.img}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.category}}</td>
+    </tr>
+  </tbody>
+  </table>
+</div>

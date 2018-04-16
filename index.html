@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebShop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body ng-app="index" ng-controller="indexController as app">
+        <div class="header">
+            <img alt="logo" class="img-responsive logo"  src="data/icon.png" ui-sref="home">
+            <div class="btn-group navigation" role="group" aria-label="...">
+                <button type="button" class="btn btn-info" ui-sref="home">Home</button>
+                <button type="button" class="btn btn-info" ui-sref="about">About us</button>
+            </div>
+            <div class="user">
+                <div class="log-in" ng-if="!app.userStatus">
+                    <a ui-sref="clientLogin">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <p>LOGIN</p>
+                    </a>
+                </div>
+                <div class="log-out" ng-if="app.userStatus" ng-click="app.change()">
+                    <a href="#">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <p>LOGOUT</p>
+                    </a>
+                </div>
+                <div class="sign-up" ng-if="!app.userStatus">
+                    <a ui-sref="register">
+                        <i class="fas fa-user-plus"></i>
+                        <p>SIGN UP</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div ui-view></div>
+        <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+        <script src="data/angular-ui-router.min.js" type="text/javascript"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script src="fontawesome-free-5.0.4/svg-with-js/js/fontawesome-all.min.js" type="text/javascript"></script>
+    </body>
+</html>
